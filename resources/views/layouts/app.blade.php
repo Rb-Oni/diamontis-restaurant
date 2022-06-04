@@ -10,7 +10,7 @@
     <title>@yield('title')</title>
 </head>
 
-<body class="bg-slate-100 selection:bg-greenc">
+<body class="">
 
     @include('layouts.navbar')
 

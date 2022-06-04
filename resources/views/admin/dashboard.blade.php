@@ -89,7 +89,7 @@
 
             <div class="bg-white overflow-hidden shadow-sm mt-12 px-4">
                 <div class="p-6 bg-white border-b border-gray-200 flex items-center justify-between">
-                    <span class="text-xl lg:text-2xl">Dernière actualité ajoutée</span>
+                    <span class="text-xl lg:text-2xl">Dernière catégorie ajoutée</span>
                     <a href="{{ route('admin.categories.create') }}" class="flex items-center px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg><span class="align-middle hidden lg:block">Ajouter</span></a>

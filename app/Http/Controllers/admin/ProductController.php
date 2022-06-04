@@ -17,7 +17,6 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $categories = Category::query();
         $products = Product::query();
         if (request('search')) {
             $products->where('name', 'Like', '%' . request('search') . '%');

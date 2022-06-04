@@ -1,8 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-şemibold text-xl text-gray-800 leading-tight">
-            <span class="text-slate-500 font-bold">{{ $categories->total() }}</span> Catégories
-        </h2>
+        <div class="flex justify-between items-center">
+            <div>
+                <h2 class="font-şemibold text-xl text-gray-800 leading-tight">
+                    <span class="text-slate-500 font-bold">{{ $categories->total() }}</span> Catégories
+                </h2>
+            </div>
+            <div>
+                <a href="{{ route('admin.categories.create') }}" class="inline-block px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg><span class="align-middle">Ajouter</span></a>
+            </div>
+        </div>
     </x-slot>
 
     <div class="py-12">
@@ -12,16 +21,10 @@
             <x-success-message />
         </div>
 
-        <div class="w-full lg:w-5/6 max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <a href="{{ route('admin.categories.create') }}" class="inline-block px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg><span class="align-middle">Ajouter</span></a>
-        </div>
-
         @if($categories->isEmpty())
         <h1 class="font-bold font-times text-4xl text-center mt-12">Aucune catégorie</h1>
         @else
-        <div class="w-full lg:w-5/6 max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full lg:w-5/6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white shadow-md rounded my-6">
                 <table class="min-w-max w-full table-auto">
                     <thead>
@@ -57,12 +60,12 @@
 
                                         <div x-show="showModal" class="fixed w-full flex items-center justify-center overflow-auto z-50 bg-black bg-opacity-40 left-0 right top-0 bottom-0" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
                                             <!-- Modal -->
-                                            <div x-show="showModal" class="bg-white rounded-md shadow-2xl p-6 w-3/12 mx-10" @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform" x-transition:enter-start="opacity-0 scale-90 translate-y-1" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease duration-100 transform" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                                            <div x-show="showModal" class="bg-white rounded-md shadow-2xl p-6 xl:w-3/12 sm:w-2/3 mx-10" @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform" x-transition:enter-start="opacity-0 scale-90 translate-y-1" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease duration-100 transform" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-90 translate-y-1">
                                                 <!-- Title -->
                                                 <span class="block text-black text-2xl mb-3">Souhaitez vous supprimer la catégorie ?</span>
                                                 <span class="text-2xl font-bold text-slate-500">{{ $category->name }}</span>
                                                 <!-- Buttons -->
-                                                <div class="text-right  mt-5">
+                                                <div class="text-right mt-5">
                                                     <button @click="showModal = !showModal" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                             <path stroke-linecap="round" stroke-linejoin="round" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
                                                         </svg><span class="align-middle">Annuler</span></button>

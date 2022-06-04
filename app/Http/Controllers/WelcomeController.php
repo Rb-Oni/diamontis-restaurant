@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function index()
+    public function home()
     {
         $products = Product::with('category')->get();
 
@@ -34,10 +34,5 @@ class WelcomeController extends Controller
             'desserts' => $desserts,
             'drinks' => $drinks,
         ]);
-    }
-
-    public function contact()
-    {
-        return view('contact');
     }
 }

@@ -34,7 +34,7 @@
             <div class="bg-white shadow-md rounded my-6">
                 <table class="min-w-max w-full table-auto">
                     <thead class="">
-                        <tr class="bg-slate-500 text-white uppercase text-md leading-normal wrap">
+                        <tr class="bg-yellow-500 text-white uppercase text-md leading-normal wrap">
                             <th class="py-3 px-6 text-left">Nom</th>
                             <th class="py-3 px-6 text-center hidden lg:table-cell">Catégorie</th>
                             <th class="py-3 px-6 text-center hidden lg:table-cell">Description</th>

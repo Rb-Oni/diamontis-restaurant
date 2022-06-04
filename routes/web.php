@@ -17,8 +17,7 @@ use App\Http\Controllers\admin\ProductController as AdminProductController;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
-Route::get('/contact', [WelcomeController::class, 'contact'])->name('contact');
+Route::get('/', [WelcomeController::class, 'home'])->name('welcome');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');

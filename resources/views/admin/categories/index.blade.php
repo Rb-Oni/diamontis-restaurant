@@ -28,7 +28,7 @@
             <div class="bg-white shadow-md rounded my-6">
                 <table class="min-w-max w-full table-auto">
                     <thead>
-                        <tr class="bg-slate-500 text-white uppercase text-md leading-normal">
+                        <tr class="bg-yellow-500 text-white uppercase text-md leading-normal">
                             <th class="py-3 px-6 text-left">Nom</th>
                             <th class="py-3 px-6 text-center">Action</th>
                         </tr>

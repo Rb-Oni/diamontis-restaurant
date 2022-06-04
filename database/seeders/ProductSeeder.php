@@ -47,9 +47,9 @@ class ProductSeeder extends Seeder
                 'price' => '10'
             ],
             [
-                'name' => 'Burger verte',
+                'name' => 'Burger vert',
                 'category_id' => '2',
-                'description' => "Un burger verte",
+                'description' => "Un burger vert",
                 'price' => '9.99'
             ],
             [

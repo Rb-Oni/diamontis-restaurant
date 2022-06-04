@@ -17,7 +17,7 @@
 
                 <div class="bg-white mb-6 mt-2">
                     <table class="min-w-max w-full table-auto">
-                        <tbody class="text-gray-600 text-sm font-light">
+                        <tbody class="text-black text-sm font-light">
                             <tr class="">
                                 <td class="py-3 px-6">
                                     <div class="flex">
@@ -97,7 +97,7 @@
 
                 <div class="bg-white mb-6 mt-2">
                     <table class="min-w-max w-full table-auto">
-                        <tbody class="text-gray-600 text-sm font-light">
+                        <tbody class="text-black text-sm font-light">
                             <tr class="">
                                 <td class="py-3 px-6 text-left">
                                     <div class="flex items-center max-w-screen-md">

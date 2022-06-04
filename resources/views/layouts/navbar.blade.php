@@ -1,7 +1,7 @@
-<div class="container-fluid bg-slate-500 text-white">
+<div class="container-fluid bg-neutral-900 text-white">
     <div x-data="{ open: true }" class="flex flex-col px-4 md:items-center md:justify-between md:flex-row md:px-8 lg:px-12">
         <div class="flex flex-row justify-between py-2">
-            <a class="font-bold text-2xl md:text-4xl xl:text-5xl" aria-current="page" href="{{ route('welcome') }}">Diamontis Restaurant</a>
+            <a class="font-bold text-2xl md:text-4xl xl:text-5xl uppercase py-2" aria-current="page" href="{{ route('welcome') }}">Diamontis Restaurant</a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                     <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -10,10 +10,10 @@
             </button>
         </div>
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-            <a class="hover:text-black focus:text-black font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4" href="{{ route('welcome') }}">MENU</a>
+            <a class="hover:text-yellow-500 focus:text-yellow-500 font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4" href="{{ route('welcome') }}">MENU</a>
             @guest
             @else
-            <a class="hover:text-black focus:text-black font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4" href="{{ route('dashboard') }}">DASHBOARD</a>
+            <a class="hover:text-yellow-500 focus:text-yellow-500 font-bold text-2xl ease-in duration-150 md:mt-0 md:ml-4" href="{{ route('dashboard') }}">DASHBOARD</a>
             @endguest
         </nav>
     </div>

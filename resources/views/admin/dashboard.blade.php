@@ -9,10 +9,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm px-4">
                 <div class="p-6 bg-white border-b border-gray-200 flex items-center justify-between">
-                    <span class="text-2xl">Dernier produit ajouté</span>
-                    <a href="{{ route('admin.products.create') }}" class="inline-block px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <span class="text-xl lg:text-2xl">Dernier produit ajouté</span>
+                    <a href="{{ route('admin.products.create') }}" class="flex items-center px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg><span class="align-middle">Ajouter</span></a>
+                        </svg><span class="align-middle hidden lg:block">Ajouter</span></a>
                 </div>
 
                 <div class="bg-white mb-6 mt-2">
@@ -22,21 +22,21 @@
                                 <td class="py-3 px-6">
                                     <div class="flex">
                                         <div class="">
-                                            <span class="font-bold text-2xl">{{ $products->name }}</span>
+                                            <span class="font-bold text-lg lg:text-2xl">{{ $products->name }}</span>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="py-3 px-6 text-center">
+                                <td class="py-3 px-6 text-center hidden lg:table-cell">
                                     <div class="flex items-center justify-center">
                                         <span>{{ $products->category->name }}</span>
                                     </div>
                                 </td>
-                                <td class="py-3 px-6 text-center">
+                                <td class="py-3 px-6 text-center hidden lg:table-cell">
                                     <div class="flex items-center justify-center">
                                         <span>{{ $products->description }}</span>
                                     </div>
                                 </td>
-                                <td class="py-3 px-6 text-center">
+                                <td class="py-3 px-6 text-center hidden lg:table-cell">
                                     <div class="flex items-center justify-center">
                                         <span>{{ $products->price }}€</span>
                                     </div>
@@ -89,10 +89,10 @@
 
             <div class="bg-white overflow-hidden shadow-sm mt-12 px-4">
                 <div class="p-6 bg-white border-b border-gray-200 flex items-center justify-between">
-                    <span class="text-2xl">Dernière actualité ajoutée</span>
-                    <a href="{{ route('admin.categories.create') }}" class="inline-block px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <span class="text-xl lg:text-2xl">Dernière actualité ajoutée</span>
+                    <a href="{{ route('admin.categories.create') }}" class="flex items-center px-4 py-2.5 bg-green-500 text-white font-bold text-md leading-tight rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg><span class="align-middle">Ajouter</span></a>
+                        </svg><span class="align-middle hidden lg:block">Ajouter</span></a>
                 </div>
 
                 <div class="bg-white mb-6 mt-2">
@@ -101,7 +101,7 @@
                             <tr class="">
                                 <td class="py-3 px-6 text-left">
                                     <div class="flex items-center max-w-screen-md">
-                                        <span class="break-words">{{ $categories->name }}</span>
+                                        <span class="font-bold text-lg lg:text-2xl">{{ $categories->name }}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">

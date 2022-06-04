@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\admin\ProductController as AdminProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,12 @@ Route::group(['middleware' => 'auth'], function () {
         'index' => 'admin.categories.index',
         'create' => 'admin.categories.create',
         'edit' => 'admin.categories.edit'
+    ]]);
+
+    Route::resource('products', AdminProductController::class, ['names' => [
+        'index' => 'admin.products.index',
+        'create' => 'admin.products.create',
+        'edit' => 'admin.products.edit'
     ]]);
 });
 

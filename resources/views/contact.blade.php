@@ -2,11 +2,11 @@
 
 
 @section('title')
-Diamontis Restaurant
+Diamontis Restaurant - Contact
 @endsection
 
 @section('content')
 
-Accueil
+Contact
 
 @endsection

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\admin\CategoryController as AdminCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,12 @@ Route::get('/contact', [WelcomeController::class, 'contact'])->name('contact');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('categories', AdminCategoryController::class, ['names' => [
+        'index' => 'admin.categories.index',
+        'create' => 'admin.categories.create',
+        'edit' => 'admin.categories.edit'
+    ]]);
 });
 
 require __DIR__ . '/auth.php';

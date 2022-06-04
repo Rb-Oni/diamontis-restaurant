@@ -21,7 +21,7 @@
             <x-success-message />
         </div>
 
-        <div class="w-full lg:w-5/6 max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-row justify-between">
+        <div class="w-full lg:w-5/6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-between">
             <form action="" method="GET" class="flex items-center">
                 <input type="search" name="search" id="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Rechercher un produit" aria-label="Search" aria-describedby="button-addon2">
             </form>
@@ -34,11 +34,11 @@
             <div class="bg-white shadow-md rounded my-6">
                 <table class="min-w-max w-full table-auto">
                     <thead class="">
-                        <tr class="bg-slate-500 text-white uppercase text-md leading-normal">
+                        <tr class="bg-slate-500 text-white uppercase text-md leading-normal wrap">
                             <th class="py-3 px-6 text-left">Nom</th>
-                            <th class="py-3 px-6 text-center">Catégorie</th>
-                            <th class="py-3 px-6 text-center">Description</th>
-                            <th class="py-3 px-6 text-center">Prix</th>
+                            <th class="py-3 px-6 text-center hidden lg:table-cell">Catégorie</th>
+                            <th class="py-3 px-6 text-center hidden lg:table-cell">Description</th>
+                            <th class="py-3 px-6 text-center hidden lg:table-cell">Prix</th>
                             <th class="py-3 px-6 text-center">Action</th>
                         </tr>
                     </thead>
@@ -49,21 +49,21 @@
                             <td class="py-3 px-6">
                                 <div class="flex">
                                     <div class="">
-                                        <span class="font-bold text-2xl">{{ $product->name }}</span>
+                                        <span class="font-bold text-lg lg:text-2xl">{{ $product->name }}</span>
                                     </div>
                                 </div>
                             </td>
-                            <td class="py-3 px-6 text-center">
+                            <td class="py-3 px-6 text-center hidden lg:table-cell">
                                 <div class="flex items-center justify-center">
                                     <span>{{ $product->category->name }}</span>
                                 </div>
                             </td>
-                            <td class="py-3 px-6 text-center">
+                            <td class="py-3 px-6 text-center hidden lg:table-cell">
                                 <div class="flex items-center justify-center">
                                     <span>{{ $product->description }}</span>
                                 </div>
                             </td>
-                            <td class="py-3 px-6 text-center">
+                            <td class="py-3 px-6 text-center hidden lg:table-cell">
                                 <div class="flex items-center justify-center">
                                     <span>{{ $product->price }}€</span>
                                 </div>

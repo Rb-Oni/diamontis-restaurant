@@ -72,9 +72,31 @@ class ProductController extends Controller
         return redirect()->route('admin.products.edit', $product)->with('message', 'Produit modifié avec succès');
     }
 
+    public function archive()
+    {
+        $products = Product::onlyTrashed()
+            ->orderBy('id', 'DESC')->get();
+
+        return view('admin.products.archive', compact('products'));
+    }
+
     public function destroy(Product $product)
     {
+        if ($product->trashed()) {
+            $product->forceDelete();
+
+            return redirect()->route('admin.products.archive')->with('message', 'Produit supprimé définitivement avec succès');
+        }
+
         $product->delete();
+
         return redirect()->route('admin.products.index')->with('message', 'Produit supprimé avec succès');
+    }
+
+    public function restore(Product $product)
+    {
+        $product->restore();
+
+        return redirect()->route('admin.products.index')->with('message', 'Produit restauré avec succès');
     }
 }

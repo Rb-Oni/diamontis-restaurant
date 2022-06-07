@@ -28,11 +28,14 @@ Route::group(['middleware' => 'auth'], function () {
         'edit' => 'admin.categories.edit'
     ]]);
 
-    Route::resource('products', AdminProductController::class, ['names' => [
-        'index' => 'admin.products.index',
-        'create' => 'admin.products.create',
-        'edit' => 'admin.products.edit'
-    ]]);
+    Route::get('/products', [AdminProductController::class, 'index'])->name('admin.products.index');
+    Route::get('/products/create', [AdminProductController::class, 'create'])->name('admin.products.create');
+    Route::post('/products/create', [AdminProductController::class, 'store'])->name('products.store');
+    Route::get('/products/{product}/edit', [AdminProductController::class, 'edit'])->name('admin.products.edit');
+    Route::put('/products/{product}', [AdminProductController::class, 'update'])->name('products.update');
+    Route::get('/products/archive', [AdminProductController::class, 'archive'])->name('admin.products.archive');
+    Route::post('/products/{product}/restore', [AdminProductController::class, 'restore'])->name('products.restore')->withTrashed();
+    Route::delete('/products/{product}', [AdminProductController::class, 'destroy'])->name('products.destroy')->withTrashed();
 });
 
 require __DIR__ . '/auth.php';
